@@ -33,7 +33,8 @@ GitHub Actions → Build → Test → Scan → Push Image → Deploy to Cluster
 
 # 📁 Project Structure
 
-cloud-native-devsecops-demo-app/ ├── app/ │   ├── main.py │   ├── routers/ │   │   └── hello.py │   ├── requirements.txt │   └── Dockerfile │ ├── k8s/ │   ├── deployment.yaml │   ├── service.yaml │   └── ingress.yaml │ ├── .github/ │   └── workflows/ │       └── cicd.yml │ ├── security/ │   ├── bandit.yaml │   └── trivyignore │ └── README.md
+cloud-native-devsecops-demo-app/ 
+├── app/ │   ├── main.py │   ├── routers/ │   │   └── hello.py │   ├── requirements.txt │   └── Dockerfile │ ├── k8s/ │   ├── deployment.yaml │   ├── service.yaml │   └── ingress.yaml │ ├── .github/ │   └── workflows/ │       └── cicd.yml │ ├── security/ │   ├── bandit.yaml │   └── trivyignore │ └── README.md
 
 ---
 
