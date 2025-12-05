@@ -1,11 +1,9 @@
 
-# -cloud-native-devsecops-demo-app
-
 # 🌐 Cloud-Native DevSecOps Demo App
+
 A fully containerized, secure-by-default, cloud-native demo application designed to showcase DevOps + DevSecOps + Kubernetes + CI/CD best practices.  
 This project is perfect for demonstrating real-world production workflows in a clean, simple, and resume-ready format.
 
----
 
 ## 🧩 Overview
 This repository includes:
@@ -21,7 +19,6 @@ This repository includes:
 - Automated build → test → scan → deploy flow
 - Production-grade folder structure
 
----
 
 # 🏗 Architecture Diagram
 
@@ -29,10 +26,10 @@ Client → Ingress → FastAPI App → Logs/Health Metrics
 ↑
 GitHub Actions → Build → Test → Scan → Push Image → Deploy to Cluster
 
----
 
 # 📁 Project Structure
 
+```bash
 cloud-native-devsecops-demo-app/
 │
 ├── app/                                   # Source code of the Python FastAPI application
@@ -84,8 +81,7 @@ cloud-native-devsecops-demo-app/
 ├── README.md                                # Main project documentation
 └── LICENSE                                  # License file
 
-
----
+```
 
 # 🔧 Local Development
 
@@ -101,7 +97,6 @@ API will be available at:
 
 http://localhost:8000/
 
----
 
 # 🐳 Docker (Local)
 
@@ -113,7 +108,7 @@ docker build -t demo-app:latest app/
 
 docker run -p 8000:8000 demo-app:latest
 
----
+
 
 # ☸️ Kubernetes Deployment
 
@@ -133,7 +128,7 @@ kubectl apply -f k8s/ingress.yaml
 
 http://your-domain-or-minikube-ip/
 
----
+
 
 # 🔐 DevSecOps Features
 
@@ -151,7 +146,7 @@ Using Trivy during CI pipeline.
 - Minimal image  
 - No secrets baked into images  
 
----
+
 
 # 🔄 CI/CD Pipeline (GitHub Actions)
 
@@ -171,7 +166,7 @@ Full pipeline is available in:
 
 .github/workflows/cicd.yml
 
----
+
 
 # 📡 API Endpoints
 
@@ -190,13 +185,13 @@ _(Replace with your own screenshots)_
 - Kubernetes dashboard  
 - API response  
 
----
+
 
 # 🧪 Testing
 
 pytest
 
----
+
 
 # 🧱 Production Ready Features
 - Cloud-native architecture  
@@ -206,10 +201,9 @@ pytest
 - Modular & extendable  
 - Fully reproducible  
 
----
 
 
----
+
 
 1️⃣ CI/CD Pipeline Result (GitHub Actions — Simulated Screenshot)
 
@@ -233,7 +227,7 @@ pytest
 ───────────────────────────────────────────────────────────────
 
 
----
+
 
 2️⃣ Kubernetes Dashboard — Pods (Simulated Screenshot)
 
@@ -251,7 +245,7 @@ pytest
 ───────────────────────────────────────────────────────────────
 
 
----
+
 
 3️⃣ Kubernetes Deployment Status (Simulated Screenshot)
 
@@ -267,7 +261,7 @@ pytest
 ───────────────────────────────────────────────────────────────
 
 
----
+
 
 4️⃣ API Response — FastAPI (Simulated Screenshot)
 
@@ -279,6 +273,6 @@ pytest
 # 📜 License
 MIT License.
 
----
+
 
 # 👤 Author
