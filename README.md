@@ -33,8 +33,57 @@ GitHub Actions → Build → Test → Scan → Push Image → Deploy to Cluster
 
 # 📁 Project Structure
 
-cloud-native-devsecops-demo-app/ 
-├── app/ │   ├── main.py │   ├── routers/ │   │   └── hello.py │   ├── requirements.txt │   └── Dockerfile │ ├── k8s/ │   ├── deployment.yaml │   ├── service.yaml │   └── ingress.yaml │ ├── .github/ │   └── workflows/ │       └── cicd.yml │ ├── security/ │   ├── bandit.yaml │   └── trivyignore │ └── README.md
+cloud-native-devsecops-demo-app/
+│
+├── app/                                   # Source code of the Python FastAPI application
+│   ├── main.py                             # Application main entrypoint (FastAPI)
+│   ├── requirements.txt                    # Python dependencies
+│   ├── tests/                              # Unit tests
+│   │   └── test_app.py                     
+│   └── init.py
+│
+├── docker/                                 # Docker & container security configs
+│   ├── Dockerfile                           # Secure Dockerfile
+│   ├── trivy.ignore                         # Ignore rules for Trivy scan
+│   └── .dockerignore                        
+│
+├── manifests/                              # Kubernetes manifests for deployment
+│   ├── deployment.yaml                      # K8s Deployment manifest
+│   ├── service.yaml                         # K8s Service manifest
+│   ├── ingress.yaml                         # K8s Ingress manifest
+│   ├── hpa.yaml                             # Horizontal Pod Autoscaler (optional)
+│   └── kustomization.yaml                   # Kustomize config
+│
+├── cicd/                                   # DevSecOps CI/CD Pipelines
+│   ├── github-actions.yml                   # GitHub Actions pipeline
+│   ├── gitlab-ci.yml                        # GitLab CI/CD pipeline
+│   ├── jenkinsfile                          # Jenkins pipeline
+│   └── bandit.conf                          # Config for security scanning
+│
+├── monitoring/                             # Monitoring & alerting system
+│   ├── prometheus/
+│   │   ├── prometheus.yaml                  # Prometheus config
+│   │   ├── alerts.yaml                      # Alert rules
+│   │   └── dashboard.json                   # Custom Prometheus-Grafana dashboard
+│   └── grafana/
+│       └── grafana-dashboard.json           # Full Grafana dashboard
+│
+├── scripts/                                # Helper scripts for automation
+│   ├── bootstrap.sh                         # Setup script (local or cloud)
+│   └── deploy.sh                            # Automated deployment script
+│
+├── docs/                                   # Documentation & architecture diagrams
+│   ├── architecture-diagram.svg             # System architecture diagram
+│   └── security-model.md                    # Security explanation
+│
+├── .github/
+│   └── workflows/
+│       └── cicd.yml                         # Final GitHub Actions workflow
+│
+├── .gitignore                               # Ignore unnecessary files
+├── README.md                                # Main project documentation
+└── LICENSE                                  # License file
+
 
 ---
 
