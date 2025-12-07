@@ -1,5 +1,7 @@
-from fastapi import FastAPI
-import time
+
+
+# from fastapi import FastAPI
+# import time
 
 app = FastAPI(title="Cloud Native DevSecOps Demo App")
 
