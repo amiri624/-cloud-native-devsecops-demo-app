@@ -1,7 +1,5 @@
 
 
-
-
 # -cloud-native-devsecops-demo-app
 
 # 🌐 Cloud-Native DevSecOps Demo App
