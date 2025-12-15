@@ -1,0 +1,26 @@
+# ---------- Base Image ----------
+FROM python:3.11-slim
+
+# ---------- Security ----------
+RUN useradd -m appuser
+
+# ---------- Working Directory ----------
+WORKDIR /app
+
+# ---------- Dependencies ----------
+COPY app/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ---------- Application Code ----------
+COPY app/ .
+
+# ---------- Permissions ----------
+RUN chown -R appuser:appuser /app
+USER appuser
+
+# ---------- Network ----------
+EXPOSE 8000
+
+# ---------- Run ----------
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
