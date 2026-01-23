@@ -5,7 +5,6 @@ A fully containerized, secure-by-default, cloud-native demo application designed
 This project is perfect for demonstrating real-world production workflows in a clean, simple, and resume-ready format.
 
 ---
-
 ## 🧩 Overview
 This repository includes:
 
