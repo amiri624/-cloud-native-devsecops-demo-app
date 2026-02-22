@@ -1,5 +1,4 @@
 
-
 # -cloud-native-devsecops-demo-app
 # 🌐 Cloud-Native DevSecOps Demo App
 A fully containerized, secure-by-default, cloud-native demo application designed to showcase DevOps + DevSecOps + Kubernetes + CI/CD best practices.  
